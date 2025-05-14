@@ -1,0 +1,42 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0 # Get the latest from: https://github.com/pre-commit/pre-commit-hooks/releases
+    hooks:
+      - id: trailing-whitespace
+        exclude: \.(md)$
+      - id: end-of-file-fixer
+      - id: check-merge-conflict
+      - id: check-json
+        files: \.(json)$
+      - id: check-yaml
+        files: \.(yaml|yml)$
+  #######################
+  # Terraform related
+  #######################
+  - repo: https://github.com/gruntwork-io/pre-commit
+    rev: v0.1.29 # Get the latest from: https://github.com/gruntwork-io/pre-commit/releases
+    hooks:
+      - id: terragrunt-hclfmt
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.99.0 # Get the latest from: https://github.com/antonbabenko/pre-commit-terraform/releases
+    hooks:
+      - id: terraform_fmt
+        args:
+          - --args=-diff
+      - id: terraform_tflint
+        args:
+          - --args=--config=__GIT_WORKING_DIR__/.tflint.hcl
+      - id: terraform_docs
+        args:
+          - --hook-config=--path-to-file=README.md
+          - --hook-config=--add-to-existing-file=true
+          - --hook-config=--create-file-if-not-exist=true
+          - "--args=--lockfile=false"
+  - repo: local
+    hooks:
+      - id: trivy
+        name: trivy
+        language: system
+        pass_filenames: false
+        entry: |
+          trivy -q config --skip-files '*.hcl' --skip-dirs '**/.terragrunt-cache/*' --exit-code 1 .
