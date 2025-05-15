@@ -102,7 +102,7 @@ Resources provisioned:
 
 It may be useful when:
 
-- ElastiFlow Collector is deployed outside of the GCP, requires Service Account private key for authentication purposes
+- ElastiFlow Collector is deployed outside of the GCP and requires a Service Account private key for authentication purposes
 - GCP Organization policy prevents creating the private key for the Service Account
 - Exception can be made for a particular GCP project that holds Service Accounts with private keys
 
