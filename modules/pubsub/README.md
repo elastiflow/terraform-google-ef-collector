@@ -104,7 +104,7 @@ It may be useful when:
 
 - ElastiFlow Collector is deployed outside of the GCP and requires a Service Account private key for authentication purposes
 - A GCP Organization policy prevents creating the private key for the Service Account
-- Exception can be made for a particular GCP project that holds Service Accounts with private keys
+- An exception can be made for a particular GCP project that holds Service Accounts with private keys
 
 ```hcl
 data "google_project" "collector_auth" { provider = google.collector-auth }
