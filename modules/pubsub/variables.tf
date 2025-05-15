@@ -1,6 +1,6 @@
 variable "project_id" {
   type        = string
-  description = "The ID of the project where flow"
+  description = "The ID of the project for the resources to be provisioned in."
 }
 
 variable "name" {
