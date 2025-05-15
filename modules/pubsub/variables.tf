@@ -68,7 +68,7 @@ variable "pubsub_topic" {
   description = <<-EOT
     The Pub/Sub topic attributes:
     * Default retention duration is 21600 seconds (6 hours).
-    * If `name = null`, `var.name` is be used.
+    * If `name = null`, then `var.name` is used.
     * Set `retry_policy = null` to set the default retry policy ("Retry immediately").
     * Note, `message_storage_policy` is immutable, [upstream bug](https://github.com/hashicorp/terraform-provider-google/issues/20431). Topic taint is needed if you want to change it.
     * If `create = false`, `project_id` must be set
