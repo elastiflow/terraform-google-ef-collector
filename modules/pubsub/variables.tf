@@ -117,7 +117,7 @@ variable "collector_service_account" {
   default     = {}
   description = <<-EOT
     NetObserv collector service account:
-    * Created only if `create` and `var.pubsub_topic.create` is set to `true`.
+    * Created only if `create` and `var.pubsub_topic.create` are set to `true`.
     * `name` is the [account_id attribute](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/google_service_account#account_id-1) of the service account to create.
     * If `id = null`, `var.name` is be used.
   EOT
