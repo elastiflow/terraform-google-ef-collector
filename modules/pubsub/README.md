@@ -15,7 +15,7 @@
 
 This terraform module is used to configure [GCP flow logs](https://cloud.google.com/vpc/docs/flow-logs) exports from Cloud Logging to a [PubSub topic](https://cloud.google.com/logging/docs/export/configure_export_v2#overview) to be consumed by ElastiFlow Collector
 
-This module allows you to provision GCP resources in both simple (all resources in a single project) and distributed (multiple logging sinks, single topic) ways.
+This module allows you to provision GCP resources using simple (all resources in a single project) and distributed (multiple logging sinks, single topic) methods.
 
 ## Examples
 
