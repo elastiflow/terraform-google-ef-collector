@@ -1,0 +1,4 @@
+ef_test_a = {
+  project_id                  = "project_id"
+  impersonate_service_account = "service_account_email"
+}

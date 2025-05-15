@@ -1,0 +1,18 @@
+# Misc
+.DS_Store
+tmp.*
+
+# IDE
+.idea
+.vscode
+
+# Terraform
+.terraform
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.backup
+*.out
+.terragrunt-cache
+terragrunt_rendered.json
+terragrunt-debug.tfvars.json
+vars.auto.tfvars
