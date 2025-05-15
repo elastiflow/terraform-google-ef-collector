@@ -71,7 +71,7 @@ variable "pubsub_topic" {
     * If `name = null`, then `var.name` is used.
     * Set `retry_policy = null` to set the default retry policy ("Retry immediately").
     * Note, `message_storage_policy` is immutable, [upstream bug](https://github.com/hashicorp/terraform-provider-google/issues/20431). Topic taint is needed if you want to change it.
-    * If `create = false`, `project_id` must be set
+    * If `create = false`, then `project_id` must be set.
   EOT
 
   validation {
