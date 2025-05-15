@@ -29,7 +29,7 @@ All GCP resources required for the collector are co-located in a single project:
 
 ```hcl
 module "ef_collector" {
-  source  = "elastiflow/ef-collector/google//pubsub"
+  source  = "elastiflow/ef-collector/google//modules/pubsub"
   version = "~> 0.1"
 
   project_id = "some_google_project_id"
@@ -122,7 +122,7 @@ resource "google_service_account" "collector" {
 }
 
 module "collector_topic" {
-  source  = "elastiflow/ef-collector/google//pubsub"
+  source  = "elastiflow/ef-collector/google//modules/pubsub"
   version = "~> 0.1"
 
   providers = {
@@ -144,7 +144,7 @@ module "collector_topic" {
 }
 
 module "another_flow_src" {
-  source  = "elastiflow/ef-collector/google//pubsub"
+  source  = "elastiflow/ef-collector/google//modules/pubsub"
   version = "~> 0.1"
 
   providers = {
