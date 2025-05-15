@@ -161,7 +161,7 @@ module "another_flow_src" {
 
 ## Tests
 
-In order to run the tests please copy the `**/vars.auto.tfvars.sample` and fill with proper values, than run `make test-integration`
+To run the tests, please copy the `**/vars.auto.tfvars.sample` and fill it with proper values, then run `make test-integration`
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
