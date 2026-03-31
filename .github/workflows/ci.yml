@@ -13,10 +13,8 @@ on:
 jobs:
   tf_checks:
     name: Run Terraform sanity checks
-    uses: ./.github/workflows/reusable_tf_checks.yml
-    # uses: elastiflow/gha-reusable/.github/workflows/reusable_tf_checks.yml@v0
+    uses: elastiflow/gha-reusable/.github/workflows/reusable_tf_checks.yml@v0
 
   renovate_checks:
     name: Renovate checks
-    uses: ./.github/workflows/reusable_renovate_checks.yml
-    # uses: elastiflow/gha-reusable/.github/workflows/reusable_renovate_checks.yml@v0
+    uses: elastiflow/gha-reusable/.github/workflows/reusable_renovate_checks.yml@v0
