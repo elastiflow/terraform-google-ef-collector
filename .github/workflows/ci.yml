@@ -11,6 +11,10 @@ on:
       - main
 
 jobs:
+  mandatory_checks:
+    name: Run Terraform sanity checks
+    uses: elastiflow/gha-reusable/.github/workflows/reusable_mandatory_checks.yml@v0
+
   tf_checks:
     name: Run Terraform sanity checks
     uses: elastiflow/gha-reusable/.github/workflows/reusable_tf_checks.yml@v0
