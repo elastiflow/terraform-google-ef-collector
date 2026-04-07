@@ -8,7 +8,7 @@ variable "name" {
   default     = "ef-collector"
   description = <<-EOT
     The name of the Google project-level logging sink.
-    If individual names are not provided, all other resources use this as a name.
+    If individual names are not provided in a relevant vars, this name is used.
   EOT
 }
 
